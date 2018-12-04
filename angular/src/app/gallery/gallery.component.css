@@ -1,0 +1,10 @@
+.card {
+    
+    width:100px;
+    height: 100px;
+}
+.imgGallery{
+    width:100px;
+    height: 100px;
+    object-fit: cover;
+}

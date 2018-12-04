@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="camera-header" >
+    
+    
+    
+  </div>
+  <div class="camera-content">
+  </div>
+
+  <div class="camera-footer">
+      <div class="scroll-div">
+          <!-- <div class="scrolling-wrapper" *ngIf="images">
+            <div class="card" *ngFor="let image of images"><img class="imgGallery" [src]="image.path" (click)="imageSelected(image.path)"/></div>
+          </div> -->
+
+          <virtual-scroller #scroll [items]="images" class="scrolling-wrapper">
+              <div class="card" *ngFor="let image of scroll.viewPortItems">
+                <!-- <div class="imgGallery" [style.backgroundImage]="'url('+ image.path +')'"></div> -->
+                <img class="imgGallery" [src]="image.path"/>
+              </div>
+            </virtual-scroller>
+      </div>
+    
+    <!-- <div class="divButtons">
+      <button class="btn" (click)="openGallery()">Gallery</button>
+      <button class="btn" (click)="captureImage()">Capture</button>
+      <button class="btn" (click)="switchCamera()">Switch</button>
+    </div> -->
+    <div class="divButtons">
+      <div class="camera-btn" (click)="openGallery()"><img src="./assets/images/insert_photo_white_192x192.png" class="img-camera-btn"/></div>
+      <div class="camera-btn" (click)="captureImage()"><img src="./assets/images/camera_white_192x192.png" class="img-camera-btn"/></div>
+      <div class="camera-btn" (click)="switchCamera()"><img src="./assets/images/camera_front_white_192x192.png" class="img-camera-btn"/></div>
+    </div>
+  </div>
+</div>
+

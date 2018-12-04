@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="preview-header" >
+    <div class="preview-header-btn" (click)="cropClicked()"><img src="./assets/images/crop_white_192x192.png" style="width:100%"/></div>
+    <div class="preview-header-btn" (click)="resetClicked()"><img src="./assets/images/autorenew_white_192x192.png" style="width:100%"/></div>
+  </div>
+
+  <div class="preview-content">
+    <img class="preview-image" [src]="imagePath"/>
+  </div>
+
+
+  <div class="preview-footer">
+    <div class="preview-footer-btn" (click)="uploadClicked()"><img src="./assets/images/check_white_192x192.png" class="btn-img-upload"/></div>
+  </div>
+</div>

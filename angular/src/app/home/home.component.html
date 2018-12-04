@@ -1,0 +1,25 @@
+<virtual-scroller #scroll [items]="images" class="scrolling-wrapper">
+  <div class="card" *ngFor="let image of scroll.viewPortItems">
+    <img class="imgGallery" [src]="image"/>
+  </div>
+</virtual-scroller>
+
+<div style="margin-left:auto;margin-right: auto;width:200px" class="mainButtons">
+  <button style="margin-top:200px"><a routerLink="/camera">Picture</a></button><br>
+  <button ><a routerLink="/gallery">Gallery</a></button><br>
+  <button ><a routerLink="/preview">Preview</a></button>
+  <button ><a routerLink="/compress-image">Compress</a></button>
+  <button (click)="cropClicked()">Crop</button>
+  <!-- <img [src]="path"> -->
+  <img [src]="uploadImagePath"class="selected-image"/>
+</div>
+<div class="divButtons">
+  <div class="camera-btn"><img src="./assets/images/insert_photo_white_192x192.png" class="img-camera-btn"/></div>
+  <div class="camera-btn"><img src="./assets/images/camera_white_192x192.png" class="img-camera-btn"/></div>
+  <div class="camera-btn"><img src="./assets/images/camera_front_white_192x192.png" class="img-camera-btn"/></div>
+</div>
+
+
+
+
+
